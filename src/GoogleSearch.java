@@ -15,7 +15,7 @@ public class GoogleSearch {
 
         driver.get("https://google.com");
 
-        WebDriverWait wait = new WebDriverWait(driver, 3);
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@title='Search']")));
         driver.findElement(By.xpath("//input[@title='Search']")).sendKeys("www.apple.com");
         driver.findElement(By.cssSelector("input[jsaction='trigger.kWlxhc']")).click();
